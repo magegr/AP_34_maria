@@ -11,9 +11,10 @@ Ej 5- Sustituye todas las ocurrencias de "panza" por "barriga" (orden sed)
 Ej 6- Idem pero independiente de mayúsculas y minúsculas
     sed 's/panza/barriga/gi' el_quijote.txt
 Ej 7-Extrae los primeros 4 caracteres del fichero 
-
+    head -c 5 el_quijote.txt
 Ej 8-Extrae los primeros 4000 caracteres del fichero 
-
+    head -c 4000 el_quijote.txt
 Ej 9-Extrae de la línea 14 a la 25 
-
-Ej 10-Ordena las líneas del fichero descendente ignorando mayúsculas y minúsculas 
+    sed -n '14,25p' el_quijote.txt
+Ej 10-Ordena las líneas del fichero descendente ignorando mayúsculas y minúsculas
+    sort -f -r el_quijote.txt
