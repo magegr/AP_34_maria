@@ -1,10 +1,19 @@
-¿Cuántas veces aparece la palabra "quijote"? 
-¿En cuántas líneas no aparece la palabra quijote? 
-Busca en todos los ficheros donde se encuentra la palabra quijote y cuenta el número de veces que aparece 
-Lo mismo que el ejercicio anterior pero sin que aparezcan los archivos donde la palabra quijote no existe 
-Sustituye todas las ocurrencias de "panza" por "barriga" (orden sed) 
-Idem pero independiente de mayúsculas y minúsculas 
-Extrae los primeros 4 caracteres del fichero 
-Extrae los primeros 4000 caracteres del fichero 
-Extrae de la línea 14 a la 25 
-Ordena las líneas del fichero descendente ignorando mayúsculas y minúsculas 
+Ej 1- ¿Cuántas veces aparece la palabra "quijote"? 
+    grep -o -i  'Quijote' el_quijote.txt | wc -l
+Ej 2- ¿En cuántas líneas no aparece la palabra quijote? 
+    grep -icv 'quijote' el_quijote.txt
+Ej 3- Busca en todos los ficheros donde se encuentra la palabra quijote y cuenta el número de veces que aparece 
+    grep -isrc 'quijote' *
+Ej 4- Lo mismo que el ejercicio anterior pero sin que aparezcan los archivos donde la palabra quijote no existe 
+    grep -isrc 'quijote' * | grep -v ':0$'
+Ej 5- Sustituye todas las ocurrencias de "panza" por "barriga" (orden sed) 
+    sed 's/panza/barriga/g' el_quijote.txt
+Ej 6- Idem pero independiente de mayúsculas y minúsculas
+    sed 's/panza/barriga/gi' el_quijote.txt
+Ej 7-Extrae los primeros 4 caracteres del fichero 
+
+Ej 8-Extrae los primeros 4000 caracteres del fichero 
+
+Ej 9-Extrae de la línea 14 a la 25 
+
+Ej 10-Ordena las líneas del fichero descendente ignorando mayúsculas y minúsculas 
