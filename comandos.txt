@@ -5,16 +5,16 @@ Ej 2- ¿En cuántas líneas no aparece la palabra quijote?
 Ej 3- Busca en todos los ficheros donde se encuentra la palabra quijote y cuenta el número de veces que aparece 
     grep -isrc 'quijote' *
 Ej 4- Lo mismo que el ejercicio anterior pero sin que aparezcan los archivos donde la palabra quijote no existe 
-    grep -isrc 'quijote' * | grep -v ':0$'
+    grep -isrc 'quijote' * | grep -v ':0' //para que no de error se le pone la s, y el -v es para que no aparezcan las que tienen :0
 Ej 5- Sustituye todas las ocurrencias de "panza" por "barriga" (orden sed) 
     sed 's/panza/barriga/g' el_quijote.txt
 Ej 6- Idem pero independiente de mayúsculas y minúsculas
-    sed 's/panza/barriga/gi' el_quijote.txt
+    sed -i 's/panza/barriga/gi' el_quijote.txt // g lo que hace es cambierlo todo e i es para ignorar esto solo te lo muesra por pantalla , si queremos que nos lo cambie en el archivo entonces tendremos que poner -i
 Ej 7-Extrae los primeros 4 caracteres del fichero 
-    head -c 5 el_quijote.txt
+    head -c 4 el_quijote.txt 
 Ej 8-Extrae los primeros 4000 caracteres del fichero 
     head -c 4000 el_quijote.txt
 Ej 9-Extrae de la línea 14 a la 25 
-    sed -n '14,25p' el_quijote.txt
+    head -n 25 | tail -n 11
 Ej 10-Ordena las líneas del fichero descendente ignorando mayúsculas y minúsculas
-    sort -f -r el_quijote.txt
+    sort -f -r el_quijote.txt // -f hace ignorar mayusculas de minusculs y el -r hace hace ordenar
